@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/coverFragment">
+
+    <fragment
+        android:id="@+id/coverFragment"
+        android:name="com.example.navi4screens.CoverFragment"
+        android:label="fragment_cover"
+        tools:layout="@layout/fragment_cover" >
+        <action
+            android:id="@+id/action_coverFragment_to_index_Fragment"
+            app:destination="@id/index_Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/credits_Fragment"
+        android:name="com.example.navi4screens.Credits_Fragment"
+        android:label="fragment_credits_"
+        tools:layout="@layout/fragment_credits_" >
+        <action
+            android:id="@+id/action_credits_Fragment_to_coverFragment"
+            app:destination="@id/coverFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/index_Fragment"
+        android:name="com.example.navi4screens.Index_Fragment"
+        android:label="fragment_index_"
+        tools:layout="@layout/fragment_index_" >
+        <action
+            android:id="@+id/action_index_Fragment_to_storyFragment"
+            app:destination="@id/storyFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/storyFragment"
+        android:name="com.example.navi4screens.StoryFragment"
+        android:label="fragment_story"
+        tools:layout="@layout/fragment_story" >
+        <action
+            android:id="@+id/action_storyFragment_to_credits_Fragment"
+            app:destination="@id/credits_Fragment" />
+    </fragment>
+</navigation>
